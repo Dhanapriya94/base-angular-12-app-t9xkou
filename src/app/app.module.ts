@@ -5,6 +5,7 @@ import { BasicService } from './basic.service';
 import { AppComponent } from './app.component';
 import { BasicComponent } from './basic.component';
 import {BasicPipe} from './basic.pipe';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import {BasicPipe} from './basic.pipe';
   ],
   imports: [
     BrowserModule,
-    BasicModule    
+    BasicModule,
+    HttpClientModule
   ],
   providers: [BasicService],
   bootstrap: [AppComponent],
-  exports: [BasicModule, BasicPipe]
+  exports: [BasicModule, BasicPipe, HttpClientModule]
 })
 export class AppModule { }
 

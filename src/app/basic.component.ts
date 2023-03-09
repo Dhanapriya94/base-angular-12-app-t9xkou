@@ -17,6 +17,6 @@ export class BasicComponent {
   onCLick() {
     alert('self')
     // this.childClick.emit();
-    // this.bService.basicSubject.next();
+    this.bService.basicSubject.next();
   }
 }
